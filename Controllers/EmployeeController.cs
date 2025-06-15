@@ -65,7 +65,8 @@ namespace EmployeePortal.Controllers
 			{
 				_context.Add(employee);
 				await _context.SaveChangesAsync();
-				return RedirectToAction(nameof(List));
+				return RedirectToAction(nameof(Success), new { id = employee.Id });
+
 			}
 			ViewData["DepartmentId"] = new SelectList(_context.Departments, "Id", "Name", employee.DepartmentId);
 			ViewData["EmployeeTypeId"] = new SelectList(_context.EmployeeTypes, "Id", "Name", employee.EmployeeTypeId);

@@ -11,7 +11,7 @@
                 <div class="card-body p-4 border rounded">
                     <div class="text-center mb-4">
                         <h2 class="text-success mb-3"><i class="bi bi-check-circle-fill"></i> Employee Created Successfully!</h2>
-                        <p class="text-muted">Welcome <strong>@Model.FullName</strong>! We are excited to have you join the <strong>@Model.Department</strong> department. Below are the details of the newly created employee:</p>
+                        <p class="text-muted">Welcome <strong>@Model.FullName</strong>! We are excited to have you join the <strong>@Model.Department.Name</strong> department. Below are the details of the newly created employee:</p>
                     </div>
 
                     <div class="table-responsive">
@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="text-center mt-4">
-                        <a class="btn btn-success btn-lg me-3" asp-controller="Employee" asp-action="Create"><i class="bi bi-person-plus-fill"></i> Create Another Employee</a>
+                        <a class="btn btn-success btn-lg me-3" asp-controller="Employee" asp-action="AddEmployee"><i class="bi bi-person-plus-fill"></i> Create Another Employee</a>
                         <a class="btn btn-primary btn-lg" asp-controller="Employee" asp-action="List"><i class="bi bi-arrow-left-circle-fill"></i> Back to Employee List</a>
                     </div>
                 </div>
